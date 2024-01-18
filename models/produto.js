@@ -1,5 +1,3 @@
-import SaidaEstoque from './saidaEstoque';
-
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 
@@ -16,10 +14,13 @@ const Produto = db.define('produto', {
         type: Sequelize.TEXT
     },
     preco_unitario:{
-        text: Sequelize.DECIMAL
+        type: Sequelize.DECIMAL
     }
 })
 
-Produto.hasMany(EntradaEstoque)
-Produto.hasMany(SaidaEstoque)
-export default Produto
+Produto.sync()
+
+// Produto.hasMany(EntradaEstoque)
+// Produto.hasMany(SaidaEstoque)
+
+module.exports = Produto

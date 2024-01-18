@@ -19,5 +19,5 @@ const SaidaEstoque = db.define('saidaEstoque',{
 
 
 })
-SaidaEstoque.belongsTo(Produto)
-export default SaidaEstoque
+//SaidaEstoque.belongsTo(Produto)
+module.exports = SaidaEstoque

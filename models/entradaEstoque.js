@@ -18,6 +18,6 @@ const EntradaEstoque = db.define('entradaEstoque',{
     }
 })
 
-EntradaEstoque.belongsTo(Produto)
+//EntradaEstoque.belongsTo(Produto)
 
-export default EntradaEstoque
+module.exports = EntradaEstoque

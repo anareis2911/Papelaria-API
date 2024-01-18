@@ -1,8 +1,8 @@
 const { Sequelize } = require('sequelize');
 
 const dbName = 'Papelaria';
-const dbUser = 'Estoquista';
-const dbPassword = 'estoquista2024';
+const dbUser = 'root';
+const dbPassword = '';
 const dbHost = 'localhost';
 
 const sequelize = new Sequelize(dbName, dbUser, dbPassword, {
@@ -10,4 +10,10 @@ const sequelize = new Sequelize(dbName, dbUser, dbPassword, {
     dialect: 'mysql'
 })
 
-export default sequelize
+try {
+   sequelize.authenticate() 
+} catch (error) {
+    console.log(error)
+}
+
+module.exports = sequelize
