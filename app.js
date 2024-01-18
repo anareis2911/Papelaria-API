@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const connection = require('./config/database')
 const Produto = require('./models/produto')
+const produtosRoutes = require('./routes/produtoRoutes');
 
-app.use(express.urlencoded({extended:true}))
+//app.use(express.urlencoded({extended:true}))
 app.use(express.json());
 
 // Importar rotas
-const produtosRoutes = require('./routes/produtoRoutes');
 
 // Usar rotas
 app.use(produtosRoutes);
