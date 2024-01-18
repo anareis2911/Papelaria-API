@@ -10,4 +10,4 @@ const sequelize = new Sequelize(dbName, dbUser, dbPassword, {
     dialect: 'mysql'
 })
 
-module.exports = sequelize
+export default sequelize

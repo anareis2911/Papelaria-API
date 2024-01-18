@@ -1,3 +1,5 @@
+import SaidaEstoque from './saidaEstoque';
+
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 
@@ -18,4 +20,6 @@ const Produto = db.define('produto', {
     }
 })
 
-module.exports = Produto;
+Produto.hasMany(EntradaEstoque)
+Produto.hasMany(SaidaEstoque)
+export default Produto

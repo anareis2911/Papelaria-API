@@ -8,6 +8,16 @@ const EntradaEstoque = db.define('entradaEstoque',{
         autoIncrement: true
     },
     id_produto:{
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
+    },
+    quantidade:{
+        type: Sequelize.INTEGER
+    },
+    data_entrada:{
+        type: Sequelize.DATE
     }
 })
+
+EntradaEstoque.belongsTo(Produto)
+
+export default EntradaEstoque
