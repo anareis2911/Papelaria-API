@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
+const Produto = require('./produto');
 
 const EntradaEstoque = db.define('entradaEstoque',{
     id_entrada:{
@@ -7,14 +8,17 @@ const EntradaEstoque = db.define('entradaEstoque',{
         primaryKey: true,
         autoIncrement: true
     },
-    id_produto:{
-        type: Sequelize.INTEGER
-    },
     quantidade:{
         type: Sequelize.INTEGER
     },
     data_entrada:{
         type: Sequelize.DATE
+    }
+})
+
+Produto.hasMany(EntradaEstoque,{
+    foreignKey:{
+        name:"id_produto"
     }
 })
 

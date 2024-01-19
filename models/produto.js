@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
+const EntradaEstoque = require('./entradaEstoque');
 
 const Produto = db.define('produto', {
     id_produto:{
@@ -18,9 +19,9 @@ const Produto = db.define('produto', {
     }
 })
 
-Produto.sync()
 
-// Produto.hasMany(EntradaEstoque)
+
+Produto.hasMany(EntradaEstoque)
 // Produto.hasMany(SaidaEstoque)
 
 module.exports = Produto
