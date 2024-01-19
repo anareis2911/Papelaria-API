@@ -6,4 +6,13 @@ const createProduto = async (req, res) => {
     res.json({ message: 'Produto criado!' })
 } 
 
-module.exports = {createProduto}
+const getAllProdutos = async (req,res) => {
+    const produtos = await Produto.findAll()
+    res.json(produtos)
+}
+
+const getProdutoById = async (req, res) => {
+    const produto = await Produto.findByPk(req.params.id)
+    res.json(produto)
+}
+module.exports = {createProduto,getAllProdutos,getProdutoById}
