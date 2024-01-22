@@ -5,6 +5,7 @@ const Produto = require('./models/produto')
 const EntradaEstoque = require ('./models/entradaEstoque')
 const SaidaEstoque = require ('./models/saidaEstoque')
 const produtosRoutes = require('./routes/produtoRoutes');
+const entradaEstoqueRoutes = require('./routes/entradaEstoqueRoutes')
 
 //app.use(express.urlencoded({extended:true}))
 app.use(express.json());
@@ -13,6 +14,7 @@ app.use(express.json());
 
 // Usar rotas
 app.use(produtosRoutes);
+app.use(entradaEstoqueRoutes)
 
 const PORT = process.env.PORT || 3000;
 connection.sync()

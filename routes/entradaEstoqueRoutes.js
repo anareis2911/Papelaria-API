@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const ProdutoController = require('../controllers/EntradaEstoqueController')
+const EntradaEstoqueController= require('../controllers/EntradaEstoqueController')
 
-router.post('/produtos/:id/entrada', ProdutoController.registrarEntrada);
+router.post('/produtos/:id/entrada', EntradaEstoqueController.registrarEntrada);
 
 module.exports = router

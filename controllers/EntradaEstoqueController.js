@@ -1,9 +1,11 @@
-const Produto = require('../models/produto')
+const EntradaEstoque = require('../models/entradaEstoque')
 
-const registrarEntrada = async (req, res) => {
-    const {id_produto, quantidade, data_entrada} = (req.body)
-    const produto = await Produto.create({id_produto, quantidade, data_entrada})
+
+exports.registrarEntrada = async (req, res) => {
+    const {quantidade, data_entrada} = (req.body)
+    const id_produto = +req.params.id
+    const produto = await EntradaEstoque.create({id_produto, quantidade, data_entrada})
     res.json({message: "Entrada registrada com sucesso!"})
 }
 
-module.exports = registrarEntrada
+
