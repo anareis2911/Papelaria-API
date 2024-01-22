@@ -16,12 +16,4 @@ const EntradaEstoque = db.define('entradaEstoque',{
     }
 })
 
-Produto.hasMany(EntradaEstoque,{
-    foreignKey:{
-        name:"id_produto"
-    }
-})
-
-//EntradaEstoque.belongsTo(Produto)
-
 module.exports = EntradaEstoque

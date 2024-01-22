@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 const EntradaEstoque = require('./entradaEstoque');
+const SaidaEstoque = require('./saidaEstoque');
 
 const Produto = db.define('produto', {
     id_produto:{
@@ -21,7 +22,17 @@ const Produto = db.define('produto', {
 
 
 
-Produto.hasMany(EntradaEstoque)
+Produto.hasMany(EntradaEstoque, {
+    foreignKey:{
+        name: "id_produto"
+    }
+})
+
+Produto.hasMany(SaidaEstoque,{
+    foreignKey:{
+        name: "id_produto"
+    }
+})
 // Produto.hasMany(SaidaEstoque)
 
 module.exports = Produto

@@ -3,14 +3,14 @@ const app = express();
 const connection = require('./config/database')
 const Produto = require('./models/produto')
 const EntradaEstoque = require ('./models/entradaEstoque')
-const SaidaEstoque = require ('./models/saidaEstoque')
+// const SaidaEstoque = require ('./models/saidaEstoque')
 const produtosRoutes = require('./routes/produtoRoutes');
 
 //app.use(express.urlencoded({extended:true}))
 app.use(express.json());
 
 // Importar rotas
-Produto.sync({force: true})
+
 // Usar rotas
 app.use(produtosRoutes);
 

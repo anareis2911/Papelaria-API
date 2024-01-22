@@ -7,9 +7,6 @@ const SaidaEstoque = db.define('saidaEstoque',{
         primaryKey: true,
         autoIncrement: true
     },
-    id_produto:{
-        type: Sequelize.INTEGER
-    },
     quantidade:{
         type: Sequelize.INTEGER
     },
@@ -19,5 +16,4 @@ const SaidaEstoque = db.define('saidaEstoque',{
 
 
 })
-//SaidaEstoque.belongsTo(Produto)
 module.exports = SaidaEstoque
