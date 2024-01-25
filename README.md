@@ -1,14 +1,18 @@
-# Título
+# API de Estoque de Papelaria 📝
 
-## Subtítulo (índice)
+    Atividade prática de criação de API baseada em um Diagrama Entidade Relacionamento que descreve um sistema de gerenciamento de estoque de Papelaria com três entidades: PRODUTOS, ENTRADAS_ESTOQUE e SAIDAS_ESTOQUE.
 
-- Tópico
-- Para emoji: 💻 (https://www.get-emoji.com/)
+## Diagrama Entidade Relacionamento: 🖇️
+! [DRE](./assets/DRE.jpeg)
+
+## Tecnologias Utilizadas: 💻
+- Node.js
+- Express.js
+
 
 - [x] Tópico para funcionalidades
 
-! [Nome da imagem] (./rota para achar imagem)
-[Nome do link] (link) + descrição da imagem
+
 
 ```bash
 # Para colocar pedaços de código
