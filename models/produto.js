@@ -16,11 +16,9 @@ const Produto = db.define('produto', {
         type: Sequelize.TEXT
     },
     preco_unitario:{
-        type: Sequelize.DECIMAL
+        type: Sequelize.DECIMAL(10,2)
     }
 })
-
-
 
 Produto.hasMany(EntradaEstoque, {
     foreignKey:{
@@ -33,6 +31,5 @@ Produto.hasMany(SaidaEstoque,{
         name: "id_produto"
     }
 })
-// Produto.hasMany(SaidaEstoque)
 
 module.exports = Produto
